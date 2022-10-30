@@ -4,6 +4,15 @@
 
     <v-container class="my-5">
 
+      <!-- Feature selector -->
+      <v-container fluid>
+        <v-row>
+          <v-col class="d-flex" cols="12">
+            <v-select @change="changeFeature" :items="features" label="Character Features" outlined></v-select>
+          </v-col>
+        </v-row>
+      </v-container>
+
       <!-- Marvel Yearbook Collection -->
       <v-layout row wrap>
         <CharacterVue v-for="(character, index) in characters" v-bind:character="character" v-bind:index="index"
