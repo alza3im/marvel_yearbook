@@ -6,6 +6,8 @@
 
       <!-- Marvel Yearbook Collection -->
       <v-layout row wrap>
+        <CharacterVue v-for="(character, index) in characters" v-bind:character="character" v-bind:index="index"
+          v-bind:key="character.feature" />
       </v-layout>
 
     </v-container>
@@ -16,6 +18,7 @@
 <script>
 import axios from 'axios'
 import BannerVue from './Banner.vue';
+import CharacterVue from './Character.vue';
 
 export default {
   name: 'CharactersVue',
@@ -51,7 +54,7 @@ export default {
 
     }
   },
-  components: { BannerVue }
+  components: { BannerVue, CharacterVue }
 };
 </script>
 
