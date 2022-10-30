@@ -1,5 +1,6 @@
 <template>
   <div>
+    <BannerVue />
 
     <v-container class="my-5">
 
@@ -14,6 +15,7 @@
 
 <script>
 import axios from 'axios'
+import BannerVue from './Banner.vue';
 
 export default {
   name: 'CharactersVue',
@@ -49,6 +51,7 @@ export default {
 
     }
   },
+  components: { BannerVue }
 };
 </script>
 
