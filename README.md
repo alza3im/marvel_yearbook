@@ -1,24 +1,16 @@
 # marvel_yearbook
 
-## Project setup
+## Project prereq
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+Make sure you have docker installed
 ```
 
-### Compiles and minifies for production
+### Build a docker image
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+docker build -t <insert-image-name>
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Run docker container 
+```
+docker run -it -p 8080:80 -d --name <insert-container-name> <insert-image-name>
+```
