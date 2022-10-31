@@ -5,12 +5,20 @@
 Make sure you have docker installed
 ```
 
-### Build a docker image
+### Steps to get started
+1. Start docker:
 ```
-docker build -t <insert-image-name>
+service docker start
 ```
 
-### Run docker container 
+2. Pull latest app docker image:
 ```
-docker run -it -p 8080:80 -d --name <insert-container-name> <insert-image-name>
+docker pull alza3im/marvel_front_end_vue:latest
 ```
+
+3. Run container from above image:
+```
+docker run -it -p 8080:80 --rm --name marvel-flask-app-frontend  alza3im/marvel_front_end_vue:latest
+```
+
+### Frontend is currently hosted on an AWS ec2 instance http://18.212.55.232:8080

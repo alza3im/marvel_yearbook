@@ -46,7 +46,7 @@ export default {
     },
     changeFeature(feature) {
 
-      const url = `http://0.0.0.0:5000/${feature}`;
+      const url = `http://18.212.1.186:5000/${feature}`;
       let attribute = this.getFeatureName(feature);
       axios.get(url)
         .then((result) => {
